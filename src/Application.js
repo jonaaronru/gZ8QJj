@@ -6,7 +6,6 @@ import { Router, Link } from "@reach/router"
 import Account from './Account'
 import Home from './Home'
 import Avatar from './Avatar'
-import { render } from '@testing-library/react'
 
 
 export default class Application extends React.Component {
