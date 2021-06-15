@@ -268,7 +268,8 @@ button.primary,
 }
 
 .avatar {
-  border-radius: var(--custom-border-radius);
+  /* border-radius: var(--custom-border-radius); */
+  border-radius: 1000px;
   overflow: hidden;
   max-width: 100%;
 }
@@ -278,7 +279,7 @@ button.primary,
 .avatar.no-image {
   background-color: #333;
   border: 1px solid rgb(200, 200, 200);
-  border-radius: 5px;
+  /* border-radius: 5px; */
 }
 
 .footer {
@@ -345,13 +346,28 @@ button.primary,
   justify-content: center;
 }
 
-.form-widget {
+.form-widget,
+.form-widget > div:last-child {
   display: flex;
   flex-direction: column;
   gap: 20px;
 }
+/* 
+@media screen and (min-width: 640px) {
+  .form-widget {
+    flex-direction: row;
+  }
+  .form-widget > div:first-child{
+    flex-basis: 150px;
+    flex-grow: 1;
+  }
+  .form-widget > div:last-child{
+    flex-grow: 2;
+  }
+  
+} */
 
-.form-widget > .button {
+.form-widget > div > .button {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -374,6 +390,18 @@ button.primary,
 .mainNav{
   display: flex;
   margin-bottom: 40px;
+}
+.mainNav > a{
+  display: flex;
+  flex-basis: content;
+  align-items: center;
+}
+.mainNav > a:last-child{
+  margin-left: auto;
+}
+.mainNav > a > div{
+  margin-right: 10px;
+  transform: translateY(4px);
 }
 .mainNav > a + a{
   margin-left: 8px;
